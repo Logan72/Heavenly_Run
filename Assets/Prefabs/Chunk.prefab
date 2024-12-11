@@ -82,12 +82,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fencePrefab: {fileID: 6551280008075419724, guid: d6cb26b130c519944a0e2ed21b0c010c, type: 3}
+  maxNumberOfFencesPerChunk: 3
+  applePrefab: {fileID: 5898641231718320831, guid: f3b404b8d08c6c942945ae0bac97e4e9, type: 3}
+  appleProbability: 0.2
+  coinPrefab: {fileID: 2758295652674499948, guid: bd8989c5513dfde4fb3c534576d9d764, type: 3}
+  coinProbability: 0.3
   spawnPosX:
   - -3.75
   - -1.25
   - 1.25
   - 3.75
-  maxNumberOfFencesPerChunk: 3
+  spawnPosZ:
+  - -4
+  - -2
+  - 0
+  - 2
+  - 4
 --- !u!1 &6750631307052388201
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coping_Wall_Bldg_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6694550358563747761, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4173159601668770673, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
     m_RemovedGameObjects: []
@@ -356,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coping_Wall_Bldg_06
       objectReference: {fileID: 0}
+    - target: {fileID: 6694550358563747761, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -4173159601668770673, guid: 5f28e8a76fb078c4ab5d1543c3a3e4ae, type: 3}
     m_RemovedGameObjects: []
@@ -407,6 +425,10 @@ PrefabInstance:
     - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_Name
       value: Path_Cobblestone_Env_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalScale.x
@@ -477,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_Name
       value: Path_Cobblestone_Env_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323548542857262157, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8703487618186899191, guid: 3354a2fee23c9fc45a513927cd492e15, type: 3}
       propertyPath: m_LocalScale.x
