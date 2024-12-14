@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [SerializeField] CameraController cameraController;
     [SerializeField] Distance distanceScore;
     [SerializeField] GameObject chunkPrefab;
     [SerializeField] Transform chunkParent;
@@ -16,9 +17,13 @@ public class LevelGenerator : MonoBehaviour
     public static LevelGenerator lvlGen;
     [SerializeField] float minZGravity;
     [SerializeField] float maxZGravity;
+    float chunkSpeedRange;
+
+    float speedToFOV_intrpolValue { get { return (chunkMoveSpeed - minChunkMoveSpeed) / chunkSpeedRange; } }
 
     void Start()
     {
+        chunkSpeedRange = maxChunkMoveSpeed - minChunkMoveSpeed;
         SpawnChunks();
         lvlGen = this;
     }
@@ -72,5 +77,7 @@ public class LevelGenerator : MonoBehaviour
         Physics.gravity = Physics.gravity - new Vector3(0f, 0f, deltaSpeed);
         float zGravity = Mathf.Clamp(Physics.gravity.z, minZGravity, maxZGravity);
         Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, zGravity);
+
+        cameraController.ModifyCameraFOV(speedToFOV_intrpolValue);
     }
 }
