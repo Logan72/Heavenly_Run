@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Chunk : MonoBehaviour
@@ -17,6 +18,14 @@ public class Chunk : MonoBehaviour
     [SerializeField] float[] spawnPosZ;
     List<int> availableLanes = new List<int>();
     List<int> availableRows = new List<int>();
+    Timer timer;
+
+    public void Init(Timer timer)
+    {
+        this.timer = timer;
+    }
+
+    public Timer GetTimer() => timer;
 
     void Start()
     {
@@ -44,7 +53,8 @@ public class Chunk : MonoBehaviour
             if (Random.value > coinProbability) continue;
 
             Vector3 spawnPos = transform.position + new Vector3(spawnPosX[lane], 0, spawnPosZ[availableRows[i]]);
-            Instantiate(coinPrefab, spawnPos, Quaternion.identity, transform);
+            Coin newCoin = Instantiate(coinPrefab, spawnPos, Quaternion.identity, transform).GetComponent<Coin>();
+            newCoin.Init(timer);
         }        
     }
 
@@ -62,7 +72,7 @@ public class Chunk : MonoBehaviour
 
         for (int i = 0; i < numberOfFences; i++)
         {                       
-            Vector3 spawnPos = transform.position + new Vector3(spawnPosX[TakeRandomItemOut(availableLanes)], 0, 0);
+            Vector3 spawnPos = transform.position + new Vector3(spawnPosX[TakeRandomItemOut(availableLanes)], 0, -1);
             Instantiate(fencePrefab, spawnPos, Quaternion.identity, transform);
         }
     }

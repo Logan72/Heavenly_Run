@@ -4,27 +4,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
-{    
+{
     TMP_Text timerTMP;
-    public float timeLeft;
-    public static Timer _timer;
-    
+    [SerializeField] float timeLeft;
+    public float TimeLeft { get { return timeLeft; } }
+
     void Awake()
     {
         timerTMP = GetComponent<TMP_Text>();
-        _timer = this;
     }
 
     void Update()
     {
         timeLeft -= Time.deltaTime;
-
-        if(timeLeft <= 0)
-        {
-            timeLeft = 0;
-            timerTMP.text = timeLeft.ToString("###0");
-        }
-        
         timerTMP.text = timeLeft.ToString("###0");
+    }
+
+    public void ModifyTime(float timeAmount)
+    {
+        timeLeft += timeAmount;
     }
 }

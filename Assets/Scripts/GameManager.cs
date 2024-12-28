@@ -13,31 +13,32 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (timer.timeLeft <= 0)
+        if (timer.TimeLeft <= 0)
         {
-            EndSession();
+            GameOver();
         }
     }
 
-    void EndSession()
+    void GameOver()
     {
+        Time.timeScale = 0.25f;
         timer.enabled = false;
         distanceScore.enabled = false;
         obstacleSpawner.gameObject.SetActive(false);
-        playerController.gameObject.SetActive(false);
+        playerController.enabled = false;
         restartButton.gameObject.SetActive(true);
         enabled = false;
     }
 
     public void RestartGame()
-    {
+    {        
         StartCoroutine(RestartGameCoroutine());
     }
 
     IEnumerator RestartGameCoroutine()
     {
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(0.25f);
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 }

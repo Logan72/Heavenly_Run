@@ -1,25 +1,31 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] Timer timer;
     [SerializeField] CameraController cameraController;
     [SerializeField] Distance distanceScore;
-    [SerializeField] GameObject chunkPrefab;
+    [SerializeField] GameObject[] chunkPrefabs;
     [SerializeField] Transform chunkParent;
-    [SerializeField] int chunksNumber;
+    [Header("Other properties")]
+    [SerializeField] int chunksBetweenCheckpoint;    
+    [SerializeField] int activeChunksNumber;
     [SerializeField] float chunkLength;
     [SerializeField] float chunkMoveSpeed;
     [SerializeField] float minChunkMoveSpeed;
     [SerializeField] float maxChunkMoveSpeed;
-    List<GameObject> chunks = new List<GameObject>();
+    List<Chunk> chunks = new List<Chunk>();
     public static LevelGenerator lvlGen;
     [SerializeField] float minZGravity;
     [SerializeField] float maxZGravity;
     float chunkSpeedRange;
+    int totalChunksNumber = 0;
 
-    float speedToFOV_intrpolValue { get { return (chunkMoveSpeed - minChunkMoveSpeed) / chunkSpeedRange; } }
+    float speed_intrpolValue { get { return (chunkMoveSpeed - minChunkMoveSpeed) / chunkSpeedRange; } }
 
     void Start()
     {
@@ -35,9 +41,12 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnChunks()
     {
-        chunks.Add(Instantiate(chunkPrefab, transform.position, Quaternion.identity, chunkParent));
+        Chunk newChunk = Instantiate(chunkPrefabs[0], transform.position, Quaternion.identity, chunkParent).GetComponent<Chunk>();
+        newChunk.Init(timer);
+        chunks.Add(newChunk);
+        totalChunksNumber++;
 
-        for (int i = 0; i < chunksNumber - 1; i++)
+        for (int i = 0; i < activeChunksNumber - 1; i++)
         {
             SpawnChunk();
         }
@@ -56,7 +65,7 @@ public class LevelGenerator : MonoBehaviour
 
         if (chunks.Count != 0 && chunks[0].transform.position.z < Camera.main.transform.position.z - chunkLength)
         {
-            Destroy(chunks[0]);
+            Destroy(chunks[0].gameObject);
             chunks.RemoveAt(0);
             SpawnChunk();
         }
@@ -64,9 +73,21 @@ public class LevelGenerator : MonoBehaviour
 
     void SpawnChunk()
     {
+        GameObject chunkPrefabToSpawn = ChooseChunkToSpawn();
+
         Vector3 newChunkPosition = chunks[chunks.Count - 1].transform.position + new Vector3(0, 0, chunkLength);
-        GameObject newChunk = Instantiate(chunkPrefab, newChunkPosition, Quaternion.identity, chunkParent);
+
+        Chunk newChunk = Instantiate(chunkPrefabToSpawn, newChunkPosition, Quaternion.identity, chunkParent).GetComponent<Chunk>();
+        newChunk.GetComponent<Checkpoint>()?.Init(timer);
+        newChunk.Init(timer);
         chunks.Add(newChunk);
+        totalChunksNumber++;
+    }
+
+    GameObject ChooseChunkToSpawn()
+    {
+        return totalChunksNumber % (chunksBetweenCheckpoint + 1) == 0 ?
+                    chunkPrefabs[1] : chunkPrefabs[Random.Range(2, chunkPrefabs.Length)];
     }
 
     public void ChangeChunkMoveSpeed(float deltaSpeed)
@@ -78,6 +99,6 @@ public class LevelGenerator : MonoBehaviour
         float zGravity = Mathf.Clamp(Physics.gravity.z, minZGravity, maxZGravity);
         Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, zGravity);
 
-        cameraController.ModifyCameraFOV(speedToFOV_intrpolValue);
+        cameraController.ModifyCameraFOV(speed_intrpolValue);
     }
 }

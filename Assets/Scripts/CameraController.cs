@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] ParticleSystem speedUpVFX;
     [SerializeField] CinemachineCamera cinemachineCamera;
     [SerializeField] float maxFOV;
     [SerializeField] float minFOV;
@@ -21,6 +22,8 @@ public class CameraController : MonoBehaviour
         float startFOV = cinemachineCamera.Lens.FieldOfView;
         float targetFOV = Mathf.Lerp(minFOV, maxFOV, interpolationValue);
         float elapsedTime = 0f;
+
+        if(startFOV < targetFOV) speedUpVFX.Play();
 
         while (elapsedTime < zoomDuration)
         {
