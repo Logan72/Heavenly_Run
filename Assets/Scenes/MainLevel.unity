@@ -11463,7 +11463,7 @@ MonoBehaviour:
   chunkMoveSpeed: 4.5
   minChunkMoveSpeed: 2.5
   maxChunkMoveSpeed: 10
-  minZGravity: -36
+  minZGravity: -45
   maxZGravity: -28.5
 --- !u!4 &1481842646
 Transform:

@@ -95,10 +95,10 @@ public class LevelGenerator : MonoBehaviour
         chunkMoveSpeed += deltaSpeed;
         chunkMoveSpeed = Mathf.Clamp(chunkMoveSpeed, minChunkMoveSpeed, maxChunkMoveSpeed);
 
-        Physics.gravity = Physics.gravity - new Vector3(0f, 0f, deltaSpeed);
-        float zGravity = Mathf.Clamp(Physics.gravity.z, minZGravity, maxZGravity);
-        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, zGravity);
+        float interpolationValue = speed_intrpolValue;
 
-        cameraController.ModifyCameraFOV(speed_intrpolValue);
+        Physics.gravity = new Vector3(Physics.gravity.x, Physics.gravity.y, Mathf.Lerp(maxZGravity, minZGravity, interpolationValue));
+
+        cameraController.ModifyCameraFOV(interpolationValue);
     }
 }
