@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefbd7a6dfb2393449680b9334704eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: -514669248788474815}
+  deltaHealth: -45
   wreckageVFX: {fileID: 706832407786444609}
   bounceScale: 200
   collisionFX_threshhold: 2.8
@@ -5172,15 +5172,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3216903176521384355, guid: ea25b10905178f7438b99d067166f765, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3216903176521384355, guid: ea25b10905178f7438b99d067166f765, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3216903176521384355, guid: ea25b10905178f7438b99d067166f765, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3216903176521384355, guid: ea25b10905178f7438b99d067166f765, type: 3}
       propertyPath: m_LocalPosition.x

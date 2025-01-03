@@ -4,6 +4,10 @@ public class ObstacleDestroyer : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        Destroy(other.attachedRigidbody.gameObject);
+        try
+        {
+            Destroy(other.attachedRigidbody.gameObject);
+        }
+        catch { }
     }
 }

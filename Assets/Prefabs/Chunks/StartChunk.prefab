@@ -61,6 +61,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6457625796771817663, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
+      propertyPath: potionProbability
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457625796771817663, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
+      propertyPath: goldCoinProbability
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457625796771817663, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
+      propertyPath: copperCoinProbability
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6457625796771817663, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
       propertyPath: maxNumberOfFencesPerChunk
       value: 0
       objectReference: {fileID: 0}

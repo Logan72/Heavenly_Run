@@ -19,5 +19,7 @@ public abstract class Pickup : MonoBehaviour
         }
     }
 
+    public abstract void Init(LevelGenerator levelGenerator);
+
     protected abstract void OnPickUp();
 }

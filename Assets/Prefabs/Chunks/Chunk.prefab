@@ -34,6 +34,7 @@ Transform:
   - {fileID: 2993695674604413259}
   - {fileID: 1404901033988477652}
   - {fileID: 7509292127604556663}
+  - {fileID: 4196384708324467643}
   m_Father: {fileID: 4146316245707153797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4038682114255936290
@@ -81,12 +82,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6e4a6fa3b17db47917c3489e362c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fenceParent: {fileID: 4196384708324467643}
   fencePrefab: {fileID: 6551280008075419724, guid: d6cb26b130c519944a0e2ed21b0c010c, type: 3}
-  maxNumberOfFencesPerChunk: 3
+  maxNumberOfFencesPerChunk: 2
   applePrefab: {fileID: 5898641231718320831, guid: f3b404b8d08c6c942945ae0bac97e4e9, type: 3}
   appleProbability: 0.2
-  coinPrefab: {fileID: 2758295652674499948, guid: bd8989c5513dfde4fb3c534576d9d764, type: 3}
-  coinProbability: 0.3
+  potionPrefab: {fileID: 4558029562416516278, guid: 2363b2a9970a0ba43802c84e3d86eac4, type: 3}
+  potionProbability: 0.1
+  goldCoinPrefab: {fileID: 569780197983594670, guid: 9af130947d00a2243b541c650d7b54a7, type: 3}
+  goldCoinProbability: 0.2
+  copperCoinPrefab: {fileID: 2758295652674499948, guid: bd8989c5513dfde4fb3c534576d9d764, type: 3}
+  copperCoinProbability: 0.3
   spawnPosX:
   - -3.75
   - -1.25
@@ -98,6 +104,79 @@ MonoBehaviour:
   - 0
   - 2
   - 4
+--- !u!1 &6079325643460370445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4196384708324467643}
+  - component: {fileID: 2883968460708932972}
+  - component: {fileID: 8248270547633256165}
+  m_Layer: 0
+  m_Name: Fences
+  m_TagString: Fence
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4196384708324467643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079325643460370445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5419248552071367538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2883968460708932972
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079325643460370445}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &8248270547633256165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6079325643460370445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b815d06e7d137947a0ed42c4e690011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deltaHealth: -9
 --- !u!1 &6750631307052388201
 GameObject:
   m_ObjectHideFlags: 0

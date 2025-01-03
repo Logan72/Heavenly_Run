@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class Coin : Pickup
 {
-    [SerializeField] float addedTime;
-    Timer timer;
+    [SerializeField] float scoreToAdd;
+    AudioManager audioManager;
+    Score score;
 
-    public void Init(Timer timer)
+    public override void Init(LevelGenerator levelGenerator)
     {
-        this.timer = timer;
+        audioManager = levelGenerator.PropertyAudioManager;
+        score = levelGenerator.PropertyScore;
     }
 
     protected override void OnPickUp()
     {
-        AudioManager.instance.PlayCoinSFX();
-        timer.ModifyTime(addedTime);
+        audioManager.PlayCoinSFX();
+        score.ChangeScore(scoreToAdd);
     }
 }

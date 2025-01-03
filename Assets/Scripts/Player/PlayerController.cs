@@ -3,12 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] float minMovementSpeed;
+    [SerializeField] float maxMovementSpeed;
     [SerializeField] float movementSpeed;
-    Rigidbody rb;
-    Vector2 movementDirectionV2;
     [SerializeField] float rangeX;
     [SerializeField] float maxZ;
     [SerializeField] float minZ;
+    Rigidbody rb;
+    Vector2 movementDirectionV2;
 
     void Awake()
     {
@@ -34,5 +36,10 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         movementDirectionV2 = context.ReadValue<Vector2>();
+    }
+
+    public void ChangePlayerSpeed(float interpolationValue)
+    {
+        movementSpeed = Mathf.Lerp(minMovementSpeed, maxMovementSpeed, interpolationValue);
     }
 }

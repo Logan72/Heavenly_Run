@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class Apple : Pickup
 {
-    [Tooltip("The value to add to chunks' speed.")]
-    [SerializeField] float deltaSpeed;
+    [Tooltip("The value to add to Health.")]
+    [SerializeField] int deltaHealth;
+    AudioManager audioManager;
+    Health health;
+
+    public override void Init(LevelGenerator levelGenerator)
+    {
+        audioManager = levelGenerator.PropertyAudioManager;
+        health = levelGenerator.PropertyHealth;
+    }
 
     protected override void OnPickUp()
     {
-        AudioManager.instance.PlayAppleSFX();
-        LevelGenerator.lvlGen.ChangeChunkMoveSpeed(deltaSpeed);
+        audioManager.PlayAppleSFX();
+        health.ChangeHealth(deltaHealth);
     }
 }

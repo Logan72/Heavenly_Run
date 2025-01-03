@@ -1,22 +1,29 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class Rock : MonoBehaviour
+public class Rock : HealthEater
 {
-    [SerializeField] AudioSource audioSource;
     [SerializeField] ParticleSystem wreckageVFX;
     [SerializeField] float bounceScale;
     [SerializeField] float collisionFX_threshhold;
     [SerializeField] float maxShakeForce;
+    AudioSource audioSource;
     Rigidbody rb;
     CinemachineImpulseSource cinemachineImpulseSource;
+    AudioManager audioManager;
     const string fenceTag = "Fence";
     const string roadTag = "Road";
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
+    public void Init(AudioManager audioManager)
+    {
+        this.audioManager = audioManager;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -29,7 +36,7 @@ public class Rock : MonoBehaviour
                 break;
             case roadTag:
                 if (rb.linearVelocity.y > collisionFX_threshhold) PartiallyProcessCollision(collision);
-                break;               
+                break;              
         }
     }
 
@@ -37,7 +44,7 @@ public class Rock : MonoBehaviour
     {
         PlayWreckageVFX(collision);
         ShakeCamera();
-        AudioManager.instance.PlayRockSFX(audioSource);
+        audioManager.PlayRockSFX(audioSource);
     }
 
     void ShakeCamera()
