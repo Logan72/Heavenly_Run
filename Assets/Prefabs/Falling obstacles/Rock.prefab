@@ -79,8 +79,9 @@ MonoBehaviour:
   deltaHealth: -45
   wreckageVFX: {fileID: 706832407786444609}
   bounceScale: 200
-  collisionFX_threshhold: 2.8
-  maxShakeForce: 0.25
+  collisionFX_threshhold: 2.5
+  maxShakeForce: 0.2
+  minShakeForce: 0.1
 --- !u!114 &-3924327590880329389
 MonoBehaviour:
   m_ObjectHideFlags: 0

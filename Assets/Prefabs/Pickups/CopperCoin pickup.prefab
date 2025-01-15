@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7727606367064550785}
   - component: {fileID: 6669400563615067255}
   - component: {fileID: 5319439452722919013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CopperCoin pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.35
-  m_Center: {x: 0, y: 0.48, z: 0}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &5319439452722919013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Powerup_Coin_Gold
       objectReference: {fileID: 0}
+    - target: {fileID: 2701371198782746121, guid: ab7079beca09c4a45a24d22df07e346f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6979741681050572492, guid: ab7079beca09c4a45a24d22df07e346f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
@@ -131,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6979741681050572492, guid: ab7079beca09c4a45a24d22df07e346f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 6979741681050572492, guid: ab7079beca09c4a45a24d22df07e346f, type: 3}
       propertyPath: m_LocalPosition.z

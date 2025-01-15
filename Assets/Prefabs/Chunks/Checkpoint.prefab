@@ -566,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4038682114255936290, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4146316245707153797, guid: 15707b51ce35ea744a8bb2a5e14a93d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -676,7 +680,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.981112, y: 0.2877862, z: 0}
+  m_Size: {x: 10, y: 0.2877862, z: 0}
   m_Center: {x: 0, y: 0.58142877, z: 0}
 --- !u!114 &50933017272045414
 MonoBehaviour:
@@ -690,7 +694,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c03050275fa1cc4c8f3586ec2ab20e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.9
   signTMP: {fileID: 8836488742068236764}
 --- !u!1001 &6078782139955404080
 PrefabInstance:

@@ -1,7 +1,7 @@
-Animation bug: stumble2 can't transit to dying states. Try to consider using "any state" to fix this.
-
 New ideas: new characters to play with; mystery box.
 
 To-do list:
 1) Main menu with music.
 2) UI soundFX.
+
+pain b1 & b2 for being hurt, pain b3 for death

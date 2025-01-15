@@ -39,7 +39,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370985100343599964}
-  m_Material: {fileID: 13400000, guid: 18e2f3587f4464a49bed3ed9d941b0b6, type: 2}
+  m_Material: {fileID: 13400000, guid: 91721feb79ba9934594d7582eb35f8a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -119,7 +119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7654869421241976539, guid: 9193b618e7c519440a20496825c9fd9d, type: 3}
       propertyPath: m_AngularDrag
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_Wooden_Furn_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7808379655679561757, guid: fb5e4c107a8467043a7603e936d86a47, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1292191028230390868, guid: fb5e4c107a8467043a7603e936d86a47, type: 3}
     m_RemovedGameObjects: []
@@ -227,7 +231,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289525143265415055}
-  m_Material: {fileID: 13400000, guid: 18e2f3587f4464a49bed3ed9d941b0b6, type: 2}
+  m_Material: {fileID: 13400000, guid: 91721feb79ba9934594d7582eb35f8a3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

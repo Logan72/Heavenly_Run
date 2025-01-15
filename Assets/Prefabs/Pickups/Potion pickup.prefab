@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2174025865868580184}
   - component: {fileID: -659140461784241549}
   - component: {fileID: 4461392213422862576}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Potion pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,6 +166,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotionSmall
       objectReference: {fileID: 0}
+    - target: {fileID: 6501317173877298890, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502328966978137742, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502743339023140782, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502893824671093506, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503024388703864602, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6503175615579340654, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514521351810654570, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a951ee65d1735274bba8867b95aaa8dd, type: 2}
+    - target: {fileID: 6515404657218470288, guid: 56e0c9a219914594a9f39f02b6cdc11c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ab64e60aa1d3ba4fb13ef19ec6f9a80, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

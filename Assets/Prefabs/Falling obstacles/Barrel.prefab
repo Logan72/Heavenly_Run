@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1172970407169910811, guid: 9193b618e7c519440a20496825c9fd9d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449180424001112601, guid: 9193b618e7c519440a20496825c9fd9d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3662437456349305576, guid: 9193b618e7c519440a20496825c9fd9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -111,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 2324050925044277620, guid: 01b0d7cd3288fb04aa0c7ed55acafb11, type: 3}
       propertyPath: m_Name
       value: Barrel_Wooden_Prop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2324050925044277620, guid: 01b0d7cd3288fb04aa0c7ed55acafb11, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3101679061728951246, guid: 01b0d7cd3288fb04aa0c7ed55acafb11, type: 3}
       propertyPath: m_LocalPosition.x

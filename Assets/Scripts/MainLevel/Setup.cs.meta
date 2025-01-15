@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d5e2f49ee693b9e459a6bd3849e19ab1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - abc: {instanceID: 0}
+  - collectedPotions: {instanceID: 0}
+  - audioManager: {instanceID: 0}
+  - health: {instanceID: 0}
+  - cinemachineCamera: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
