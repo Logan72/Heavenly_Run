@@ -20,14 +20,14 @@ public class CollectedPotions : MonoBehaviour
         potionsTMP.text = potionsCount.ToString();
     }
 
-    public int ModifyDeltaHealth(int deltaHealth)
+    public int ModifyDeltaHealth(float deltaHealth)
     {
         if (HaveAnyPotion)
         {
             ModifyPotionsCount(-1);
-            return (int)(deltaHealth * deltaHealthScale);
+            return Mathf.RoundToInt(deltaHealth * deltaHealthScale);
         }
 
-        return deltaHealth;
+        return Mathf.RoundToInt(deltaHealth);
     }
 }

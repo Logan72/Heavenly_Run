@@ -335,7 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6abc53f82761c4a8a85dc6fd728b86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 130
+  maxHealth: 150
+  damageScale: 0.9
   animator: {fileID: 3538206144778839607}
   stumbleSFXcoolDownTime: 1
   assassinAudioManager: {fileID: 7103136892103427125}
@@ -450,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3538206144778839607}
   minMovementSpeed: 4
-  maxMovementSpeed: 8
+  maxMovementSpeed: 7
   movementSpeed: 0
   rangeX: 4.5
   maxZ: 5

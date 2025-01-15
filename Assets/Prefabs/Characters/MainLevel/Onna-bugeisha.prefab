@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 120
+  damageScale: 1
   animator: {fileID: 7486902276937810315}
   stumbleSFXcoolDownTime: 1
   onnaBugeishaAudioManager: {fileID: 6476384367995825673}
@@ -545,7 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7486902276937810315}
   minMovementSpeed: 4
-  maxMovementSpeed: 9
+  maxMovementSpeed: 8
   movementSpeed: 0
   rangeX: 4.5
   maxZ: 5

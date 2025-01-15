@@ -238,13 +238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6162340757299536769}
-  minMovementSpeed: 4
-  maxMovementSpeed: 7
+  minMovementSpeed: 3.5
+  maxMovementSpeed: 6
   movementSpeed: 0
   rangeX: 4.5
   maxZ: 5
   minZ: -1
-  specialCoolDownTime: 8
+  specialCoolDownTime: 9
   specialSkillTime: 2.5
   knightAudioManager: {fileID: 2587066526764431015}
 --- !u!114 &5455903326104961158
@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
+  damageScale: 0.8
   animator: {fileID: 6162340757299536769}
   stumbleSFXcoolDownTime: 1
   knightAudioManager: {fileID: 2587066526764431015}

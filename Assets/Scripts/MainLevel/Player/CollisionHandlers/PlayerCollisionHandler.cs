@@ -7,6 +7,7 @@ public class PlayerCollisionHandler : MonoBehaviour
     CollectedPotions collectedPotions;
     Health health;
     [SerializeField] int maxHealth;
+    [SerializeField] float damageScale;
     [SerializeField] protected Animator animator;
     [SerializeField] float stumbleSFXcoolDownTime;
     float stumbleSFXcoolDownTimer = 0f;
@@ -47,8 +48,17 @@ public class PlayerCollisionHandler : MonoBehaviour
     void NewMethod2(Collision collision)
     {
         this.collision = collision;
-        int finalDeltaHealth = collectedPotions.ModifyDeltaHealth(latestObstacleRigidbody.GetComponent<HealthEater>().DeltaHealth);
-        health.ChangeHealth(finalDeltaHealth);
+        health.ChangeHealth(TryReduceDamage());
+    }
+
+    int TryReduceDamage()
+    {
+        //apply armour
+        float deltaHealth1 = latestObstacleRigidbody.GetComponent<HealthEater>().DeltaHealth * damageScale;
+        //apply potion
+        int deltaHealth2 = collectedPotions.ModifyDeltaHealth(deltaHealth1);
+        Debug.Log(deltaHealth2);
+        return deltaHealth2;
     }
 
     public void Stumble()
