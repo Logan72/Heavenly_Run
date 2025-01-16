@@ -411,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 166.66667
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1730,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1917,12 +1917,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
+  m_Resource: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2105,7 +2105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2258,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6607,7 +6607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7895,7 +7895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -83.33331
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8933,7 +8933,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'The greater distance you run and the more coins you get, the greater score
     you get. Use "W", "A", "S", "D" keys for movement in different directions, the
-    space key for special ability. You will mostly move right/left, since you character
+    space key for special ability. You will mostly move right/left, since your character
     runs forward himself.
 
 
@@ -8949,7 +8949,7 @@ MonoBehaviour:
     fun, so take it easy, please.
 
 
-    Good luck!'
+    Good luck, my friends!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
   m_sharedMaterial: {fileID: 8573000929674338629, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
@@ -9853,7 +9853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2072248119412620080, guid: 6fbf67b6607ff8544a5c4bb399bb4a0e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10246,7 +10246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.666687
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6232902547034593588, guid: 1031e273d5f1cfa4da4c1223f53ad025, type: 3}
       propertyPath: m_LocalPosition.z
