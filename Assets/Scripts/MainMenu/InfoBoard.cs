@@ -4,14 +4,13 @@ using UnityEngine.UI;
 
 public class InfoBoard : MonoBehaviour
 {
-    [SerializeField] TMP_Text armourTMP;
-    [SerializeField] TMP_Text healingTMP;
-    [SerializeField] TMP_Text speedTMP;
-    [SerializeField] TMP_Text CGS_TMP;
-    [SerializeField] TMP_Text specialSkillTMP;
     [SerializeField] CharacterSO[] characterSOs;
+    [SerializeField] TMP_Text healthTMP;
+    [SerializeField] TMP_Text armourTMP;
+    [SerializeField] TMP_Text speedTMP;
+    [SerializeField] TMP_Text specialSkillTMP;
     [SerializeField] Transform characterContainer;
-    GameObject character;
+    GameObject currentCharacter;
 
     void Start()
     {
@@ -20,12 +19,11 @@ public class InfoBoard : MonoBehaviour
 
     public void DisplayInfo(int index)
     {  
-        Destroy(character);
-        character = Instantiate(characterSOs[index].CharacterPrefab, characterContainer);
-        armourTMP.text = "Armor: " + characterSOs[index].Armour.ToString();
-        healingTMP.text = "Healing: " + characterSOs[index].HealingSkill.ToString();
-        speedTMP.text = "Speed L/R: " + characterSOs[index].LR_Speed.ToString();
-        CGS_TMP.text = "Coin grabbing skill: " + characterSOs[index].CoinGrabbingSkill.ToString();
-        specialSkillTMP.text = "Special skill: " + characterSOs[index].SpecialSkill;
+        Destroy(currentCharacter);
+        currentCharacter = Instantiate(characterSOs[index].CharacterPrefab, characterContainer);
+        healthTMP.text = "Health: " + characterSOs[index].Health.ToString();
+        armourTMP.text = "Armour: " + characterSOs[index].Armour.ToString() + " %";
+        speedTMP.text = "Speed: " + characterSOs[index].Speed.ToString();
+        specialSkillTMP.text = "Special ability: " + characterSOs[index].SpecialSkill;
     }
 }

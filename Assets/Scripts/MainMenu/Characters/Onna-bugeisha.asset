@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Onna-bugeisha
   m_EditorClassIdentifier: 
   characterPrefab: {fileID: 842464891026125766, guid: 3338b13eaa313be438c6d5b07958cdcd, type: 3}
-  healingSkill: 1.25
+  health: 120
   armour: 0
-  lr_Speed: 1.1
-  coinGrabbingSkill: 1.25
-  specialSkill: high jumping
+  speed: 4 - 8
+  specialSkill: high front flip

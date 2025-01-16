@@ -57,7 +57,6 @@ public class PlayerCollisionHandler : MonoBehaviour
         float deltaHealth1 = latestObstacleRigidbody.GetComponent<HealthEater>().DeltaHealth * damageScale;
         //apply potion
         int deltaHealth2 = collectedPotions.ModifyDeltaHealth(deltaHealth1);
-        Debug.Log(deltaHealth2);
         return deltaHealth2;
     }
 

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    [SerializeField] MenuAudioManager menuAudioManager;
     [SerializeField] UserChoiceSetter userChoiceSetter;
     [SerializeField] GameObject mainCanvas;
     [SerializeField] float switchCanvasDelayTime;    
@@ -17,11 +18,13 @@ public class MenuManager : MonoBehaviour
 
     public void SwitchCanvas(GameObject target)
     {
+        menuAudioManager.PlayButtonSFX();
         StartCoroutine(SwitchCanvasCoroutine(target));
     }
 
     public void ExitGame()
     {
+        menuAudioManager.PlaySpecialButtonSFX();
         Application.Quit();
     }
 
@@ -37,6 +40,8 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        menuAudioManager.PlaySpecialButtonSFX();
+
         userChoiceSetter.SetChoice();
 
         current.SetActive(false);

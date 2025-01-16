@@ -551,7 +551,7 @@ MonoBehaviour:
   rangeX: 4.5
   maxZ: 5
   minZ: -1
-  specialCoolDownTime: 5
+  specialCoolDownTime: 6
   jumpingCubeTransform: {fileID: 2754421534887318365}
   jumpScale: 450
   onnaBugeishaAudioManager: {fileID: 6476384367995825673}
@@ -922,7 +922,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.25
   m_Height: 2.0685914

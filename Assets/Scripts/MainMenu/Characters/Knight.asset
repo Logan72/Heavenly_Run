@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Knight
   m_EditorClassIdentifier: 
   characterPrefab: {fileID: 7012623488011107697, guid: c2251030352958242950183200abaac6, type: 3}
-  healingSkill: 1
-  armour: 0.3
-  lr_Speed: 0.8
-  coinGrabbingSkill: 1
-  specialSkill: defence
+  health: 150
+  armour: 20
+  speed: 3.5 - 6
+  specialSkill: block

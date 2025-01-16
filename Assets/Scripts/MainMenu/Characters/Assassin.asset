@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Assassin
   m_EditorClassIdentifier: 
   characterPrefab: {fileID: 3602657046324793115, guid: 44118ea148a64bf46b7dce97791bf7c5, type: 3}
-  healingSkill: 1
-  armour: 0.15
-  lr_Speed: 1
-  coinGrabbingSkill: 1.15
-  specialSkill: jumping
+  health: 150
+  armour: 10
+  speed: 4 - 7
+  specialSkill: jump

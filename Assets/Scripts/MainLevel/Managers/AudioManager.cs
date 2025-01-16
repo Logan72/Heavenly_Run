@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioClip potionSFX;
     [SerializeField] AudioClip gameOverSFX;
     [SerializeField] AudioClip checkpointSFX;
+    [SerializeField] AudioClip buttonSFX;
+    [SerializeField] AudioClip specialButtonSFX;
+    [SerializeField] AudioClip countdownSFX;
     [Header("Volumes")]
     [SerializeField] float rockSFX_maxVolume;
     [SerializeField] float rockSFX_minVolume;
@@ -21,8 +24,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] float potionSFX_volumeScale;
     [SerializeField] float gameOverSFX_volumeScale;
     [SerializeField] float checkpointSFX_volumeScale;
+    [SerializeField] float buttonSFX_volumeScale;
+    [SerializeField] float specialButtonSFX_volumeScale;
+    [SerializeField] float countdownSFX_volumeScale;
+    public float CountdownSFX_length { get { return countdownSFX.length; } }
 
-    void Start()
+    public void PlayBackgroundMusics()
     {
         Utility.KnuthShuffle(backgroundMusics);
         StartCoroutine(PlayBackgroundMusicsCoroutine());
@@ -72,5 +79,20 @@ public class AudioManager : MonoBehaviour
         rockAudioSource.clip = rockSFX;
         rockAudioSource.volume = Mathf.Lerp(rockSFX_maxVolume, rockSFX_minVolume, interpolationValue);
         rockAudioSource.Play();
+    }
+
+    public void PlayButtonSFX()
+    {
+        audioSource.PlayOneShot(buttonSFX, buttonSFX_volumeScale);
+    }
+
+    public void PlaySpecialButtonSFX()
+    {
+        audioSource.PlayOneShot(specialButtonSFX, specialButtonSFX_volumeScale);
+    }
+
+    public void PlayCountdownSFX()
+    {
+        audioSource.PlayOneShot(countdownSFX, countdownSFX_volumeScale);
     }
 }

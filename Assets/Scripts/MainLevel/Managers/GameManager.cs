@@ -27,6 +27,21 @@ public class GameManager : MonoBehaviour
         playerCapsuleCollider = playerController.GetComponentInChildren<CapsuleCollider>();
     }
 
+    void Start()
+    {
+        Time.timeScale = 0f;
+        audioManager.PlayCountdownSFX();
+
+        StartCoroutine(Utility.DoCoroutine(delegate ()
+        {
+            Time.timeScale = 1f;
+            pauseButton.gameObject.SetActive(true);
+            menuButton.gameObject.SetActive(true);
+            audioManager.PlayBackgroundMusics();
+
+        }, audioManager.CountdownSFX_length - 0.5f));
+    }
+
     void EndGame()
     {
         Time.timeScale = 0.25f;
@@ -35,10 +50,12 @@ public class GameManager : MonoBehaviour
         resumeButton.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(false);
         menuButton.gameObject.SetActive(false);
+
         StartCoroutine(Utility.DoCoroutine(delegate()
         {
             buttonGroup2.gameObject.SetActive(true);
             audioManager.PlayGameOverSFX();
+
         }, gameOverSFX_delayTime));
     }
 
@@ -62,19 +79,25 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        audioManager.PlaySpecialButtonSFX();
+
         StartCoroutine(Utility.DoCoroutine(delegate ()
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(1);
+
         }, restartDelayTime));
     }
 
     public void GoToMainMenu()
     {
+        audioManager.PlaySpecialButtonSFX();
+
         StartCoroutine(Utility.DoCoroutine(delegate ()
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(0);
+
         }, goToMainMenuDelayTime));
     }
 
@@ -86,6 +109,7 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
+        audioManager.PlayButtonSFX();
         Time.timeScale = 0f;
         pauseButton.gameObject.SetActive(false);
         resumeButton.gameObject.SetActive(true);
@@ -93,6 +117,7 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        audioManager.PlayButtonSFX();
         Time.timeScale = 1f;
         resumeButton.gameObject.SetActive(false);
         pauseButton.gameObject.SetActive(true);
