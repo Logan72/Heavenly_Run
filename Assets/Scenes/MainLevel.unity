@@ -189,7 +189,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6149cb1739ca48747afe010cb0049a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialSkill: {fileID: 2106762407}
   timer: {fileID: 370444203}
   score: {fileID: 1274318333}
   levelGenerator: {fileID: 1481842645}
@@ -572,7 +573,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 62c5f5b971ac43947bd7bb06de86d6f8, type: 2}
   m_sharedMaterial: {fileID: -2125449275601413155, guid: 62c5f5b971ac43947bd7bb06de86d6f8, type: 2}
@@ -6772,7 +6773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123456
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 62c5f5b971ac43947bd7bb06de86d6f8, type: 2}
   m_sharedMaterial: {fileID: -2125449275601413155, guid: 62c5f5b971ac43947bd7bb06de86d6f8, type: 2}
@@ -12224,7 +12225,7 @@ MonoBehaviour:
   - {fileID: 1903826604413598030, guid: 94d8d048fa2ec5f40a937f463fb6ff5a, type: 3}
   - {fileID: 1903826604413598030, guid: 449e314d65faf964fa7ede1f8331082c, type: 3}
   chunkParent: {fileID: 1443443480}
-  chunksBetweenCheckpoints: 10
+  chunksBetweenCheckpoints: 30
   activeChunksNumber: 16
   chunkLength: 10
   chunkMoveSpeed: 0

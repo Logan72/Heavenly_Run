@@ -6,6 +6,11 @@ public class SpecialSkill : MonoBehaviour
     Slider specialSlider;
     public bool isCooledDown { get {  return specialSlider.value >= specialSlider.maxValue; } }
 
+    void Awake()
+    {
+        enabled = false;
+    }
+
     public void Init(float coolDownTime)
     {
         specialSlider = GetComponent<Slider>();

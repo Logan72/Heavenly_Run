@@ -1920,7 +1920,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
   m_Resource: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2613,9 +2613,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Huge thanks to Udemy, all people (especially Rick Davidson, Gary Pettie,
-    Denis Panjuta, Penny de Byl, Stephen Hubbard) involved in teaching me, and all
-    sources that provide me with assets. \n\n\t\t\t\t\t\t\t    Vu Ki Vova"
+  m_text: "Huge thanks to Udemy, GameDev.tv Team, all people (especially Rick Davidson,
+    Gary Pettie, Denis Panjuta, Penny de Byl, Stephen Hubbard) involved in teaching
+    me, and all sources that provide me with assets.\n\n\t\t\t\t\t\t\t    Vu Ki Vova"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
   m_sharedMaterial: {fileID: 8573000929674338629, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
@@ -4281,12 +4281,20 @@ MonoBehaviour:
     = damage / 2
 
 
+    Screen:
+
     Score is on the top-left corner.
 
-    Time is on the top-right
-    corner.
+    Time is
+    on the top-right corner.
 
-    Health is at the bottom-center.'
+    Health is at the bottom center.
+
+    Potions count
+    is at the bottom-left corner.
+
+    Special ability charge indicator is at the
+    bottom-right corner.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
   m_sharedMaterial: {fileID: 8573000929674338629, guid: 2f22c916b033ba946a11f059eea08912, type: 2}
@@ -8942,11 +8950,11 @@ MonoBehaviour:
 
 
     Apples increase your health (and
-    speed), potions reduce the damage inflicted on you.
+    speed), potions are automatically used, reducing the damage inflicted on you.
 
 
-    This game is just for
-    fun, so take it easy, please.
+    This
+    game is just for fun, so take it easy, please.
 
 
     Good luck, my friends!'

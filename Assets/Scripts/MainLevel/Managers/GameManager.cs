@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] SpecialSkill specialSkill;
     [SerializeField] Timer timer;
     [SerializeField] Score score;
     [SerializeField] LevelGenerator levelGenerator;
@@ -36,6 +37,10 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Utility.DoCoroutine(delegate ()
         {
             Time.timeScale = 1f;
+            timer.enabled = true;
+            specialSkill.enabled = true;
+            levelGenerator.enabled = true;
+            score.enabled = true;
             pauseButton.gameObject.SetActive(true);
             menuButton.gameObject.SetActive(true);
             audioManager.PlayBackgroundMusics();

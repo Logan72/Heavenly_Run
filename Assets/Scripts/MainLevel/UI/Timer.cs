@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     void Awake()
     {
         timerTMP = GetComponent<TMP_Text>();
+        enabled = false;
     }
 
     public void Init(int? time)

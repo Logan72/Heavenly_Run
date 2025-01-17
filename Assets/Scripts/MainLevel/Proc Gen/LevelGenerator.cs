@@ -36,6 +36,7 @@ public class LevelGenerator : MonoBehaviour
         Chunk.ResetStaticMembers();
         Checkpoint.ResetNumberOfCheckpoints();
         SpawnChunks();
+        enabled = false;
     }
 
     void Update()
