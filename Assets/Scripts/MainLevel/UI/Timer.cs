@@ -38,7 +38,6 @@ public class Timer : MonoBehaviour
 
             if (time <= 0f)
             {
-                enabled = false;
                 gameManager.EndGameByTime();
             }
         }

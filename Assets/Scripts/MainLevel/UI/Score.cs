@@ -17,7 +17,7 @@ public class Score : MonoBehaviour
         if (!isGameOver)
         {
             value += amount;
-            scoreTMP.text = value.ToString("######");
+            scoreTMP.text = value.ToString("#######");
         }
     }
 

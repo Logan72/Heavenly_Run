@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] Timer timer;
     [SerializeField] Score score;
     [SerializeField] LevelGenerator levelGenerator;
     [SerializeField] ObstacleSpawner obstacleSpawner;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         Time.timeScale = 0.25f;
+        timer.enabled = false;
         Destroy(obstacleSpawner);
         playerController.SetGameOver();
         resumeButton.gameObject.SetActive(false);
