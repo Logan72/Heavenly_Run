@@ -763,7 +763,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1663600742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7258141}
+  m_AnchorMin: {x: 0, y: 0.27693176}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1008,7 +1008,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1943513240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7258141}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 281091054}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27418593
+  m_Size: 0.9296592
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1317,7 +1317,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1477248414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7258141}
+  m_AnchorMin: {x: 0, y: 0.07034081}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   buttonSFX: {fileID: 8300000, guid: 5ed9970e17bfee943a6dff056dc3a9d0, type: 3}
   specialButtonSFX: {fileID: 8300000, guid: 19ee23220d478354ca29f732069ff0d0, type: 3}
   buttonSFX_volumeScale: 2
-  specialButtonSFX_volumeScale: 7
+  specialButtonSFX_volumeScale: 5
 --- !u!82 &350385956
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1920,7 +1920,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
   m_Resource: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2590,8 +2590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2373.4312}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: -15, y: 360}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &404509775
 MonoBehaviour:
@@ -3901,8 +3901,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 171942201}
   m_HandleRect: {fileID: 171942200}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.27418593
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4248,8 +4248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2373.4312}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: -15, y: 700}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &799084638
 MonoBehaviour:
@@ -4861,11 +4861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4463291365236272932, guid: 8f22fe770fdc951439d2bf358fad8f72, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4463291365236272932, guid: 8f22fe770fdc951439d2bf358fad8f72, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4463291365236272932, guid: 8f22fe770fdc951439d2bf358fad8f72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8411,7 +8411,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 123824420}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27418593
+  m_Size: 0.72306824
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8916,8 +8916,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2373.4312}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: -15, y: 900}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1788467358
 MonoBehaviour:

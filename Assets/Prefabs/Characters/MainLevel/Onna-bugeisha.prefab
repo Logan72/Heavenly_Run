@@ -573,8 +573,8 @@ MonoBehaviour:
   dyingSFX: {fileID: 8300000, guid: a83a17db9c36ac84197d420f3ac5cabc, type: 3}
   specialSFX: {fileID: 8300000, guid: 99a9b5533f07a6e4aa0ac3ca851ff8cd, type: 3}
   hurtSFXs_volume: 0.4
-  dyingSFX_volume: 0.6
-  specialSFX_volume: 0.5
+  dyingSFX_volume: 0.5
+  specialSFX_volume: 0.8
 --- !u!1 &6756152533087424875
 GameObject:
   m_ObjectHideFlags: 0

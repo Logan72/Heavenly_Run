@@ -166,15 +166,15 @@ MonoBehaviour:
   buttonSFX: {fileID: 8300000, guid: 5ed9970e17bfee943a6dff056dc3a9d0, type: 3}
   specialButtonSFX: {fileID: 8300000, guid: 19ee23220d478354ca29f732069ff0d0, type: 3}
   countdownSFX: {fileID: 8300000, guid: 0c61bbb5de640b54eacfbc6bc56b2149, type: 3}
-  rockSFX_maxVolume: 0.6
-  rockSFX_minVolume: 0.05
-  coinSFX_volumeScale: 5
+  rockSFX_maxVolume: 0.7
+  rockSFX_minVolume: 0.15
+  coinSFX_volumeScale: 7
   appleSFX_volumeScale: 3
   potionSFX_volumeScale: 4
-  gameOverSFX_volumeScale: 4
-  checkpointSFX_volumeScale: 3
+  gameOverSFX_volumeScale: 5
+  checkpointSFX_volumeScale: 2
   buttonSFX_volumeScale: 2
-  specialButtonSFX_volumeScale: 8
+  specialButtonSFX_volumeScale: 5
   countdownSFX_volumeScale: 4
 --- !u!82 &133602108
 AudioSource:
@@ -189,7 +189,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

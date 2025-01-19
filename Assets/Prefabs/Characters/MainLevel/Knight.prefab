@@ -288,8 +288,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 60d929c54583eaf479f5ff1423dae0a2, type: 3}
   hurtSFX_volume: 0.4
   dyingSFX_volume: 0.5
-  specialSFX_volume: 0.4
-  blockingSFXs_volume: 0.2
+  specialSFX_volume: 0.3
+  blockingSFXs_volume: 0.4
 --- !u!1 &4323853629146682762
 GameObject:
   m_ObjectHideFlags: 0
