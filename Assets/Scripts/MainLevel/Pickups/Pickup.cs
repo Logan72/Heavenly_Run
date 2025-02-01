@@ -4,7 +4,6 @@ public abstract class Pickup : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 100f;
     protected AudioManager audioManager;
-    const string playerTag = "Player";
 
     void Update()
     {
@@ -13,11 +12,8 @@ public abstract class Pickup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //if (other.attachedRigidbody.CompareTag(playerTag))
-        //{
         OnPickUp();
         Destroy(gameObject);
-        //}
     }
 
     public abstract void Init(LevelGenerator levelGenerator);
